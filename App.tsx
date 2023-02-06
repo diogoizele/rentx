@@ -11,9 +11,9 @@ import {
   Archivo_500Medium,
   Archivo_600SemiBold,
 } from "@expo-google-fonts/archivo";
-
-import { Home } from "./src/screens/Home/Home.screen";
 import { ThemeProvider } from "styled-components/native";
+
+import { CarDetails, Home } from "./src/screens";
 import theme from "./src/styles/theme";
 
 export default function App() {
@@ -31,12 +31,11 @@ export default function App() {
     return <AppLoadingProps />;
   }
 
+  //"https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/1ba3757e-5a2e-40c1-b701-147567924ef6/9f8cd72c-15c8-40e0-9e65-c762d7783263.png",
   return (
     <ThemeProvider theme={theme}>
-    <View style={{ flex: 1 }}>
-      <Home />
-      <StatusBar style="auto" />
-    </View>
+      {/* <Home /> */}
+      <CarDetails />
     </ThemeProvider>
   );
 }
