@@ -85,6 +85,29 @@ export const About = styled.Text`
 
   font-family: ${({ theme }) => theme.fonts.primary_400};
   color: ${({ theme }) => theme.colors.text};
-
   text-align: justify;
+
+  margin-top: 24px;
+  line-height: ${RFValue(25)}px;
+`;
+
+export const Accessories = styled.View`
+  width: 100%;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 16px;
+`;
+
+export const Footer = styled.View`
+  width: 100%;
+
+  background-color: ${({ theme }) => theme.colors.background_primary};
+
+  padding: 24px;
+  padding-bottom: ${getStatusBarHeight() + 24}px;
 `;

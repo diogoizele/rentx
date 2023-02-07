@@ -1,15 +1,23 @@
 import React from "react";
-import { BackButton } from "../../components";
-import { ImageSlider } from "../../components/ImageSlider/ImageSlider.component";
+import { Accessory, BackButton, Button, ImageSlider } from "../../components";
+
+import speedSvg from "../../assets/speed.svg";
+import accelerationSvg from "../../assets/acceleration.svg";
+import forceSvg from "../../assets/force.svg";
+import gasolineSvg from "../../assets/gasoline.svg";
+import exchangeSvg from "../../assets/exchange.svg";
+import peopleSvg from "../../assets/people.svg";
 
 import {
   About,
+  Accessories,
   Brand,
   CarImages,
   Container,
   Content,
   Description,
   Details,
+  Footer,
   Header,
   Name,
   Period,
@@ -43,22 +51,25 @@ export function CarDetails() {
             <Period>Ao dia</Period>
             <Price>R$ 580</Price>
           </Rent>
-
-          {/* <Accessories>
-            <Accessory name="380Km/h" icon={speedSvg} />
-            <Accessory name="3.2s" icon={accelerationSvg} />
-            <Accessory name="800 HP" icon={forceSvg} />
-            <Accessory name="Gasolina" icon={gasolineSvg} />
-            <Accessory name="Auto" icon={exchangeSvg} />
-            <Accessory name="2 pessoas" icon={peopleSvg} />
-          </Accessories> */}
         </Details>
+
+        <Accessories>
+          <Accessory name="380Km/h" icon={speedSvg} />
+          <Accessory name="3.2s" icon={accelerationSvg} />
+          <Accessory name="800 HP" icon={forceSvg} />
+          <Accessory name="Gasolina" icon={gasolineSvg} />
+          <Accessory name="Auto" icon={exchangeSvg} />
+          <Accessory name="2 pessoas" icon={peopleSvg} />
+        </Accessories>
         <About>
           Este é automóvel desportivo. Surgiu do lendário touro de lide
           indultado na praça Real Maestranza de Sevilla. É um belíssimo carro
           para quem gosta de acelerar.
         </About>
       </Content>
+      <Footer>
+        <Button>Criar</Button>
+      </Footer>
     </Container>
   );
 }
