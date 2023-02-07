@@ -1,7 +1,18 @@
 import React from "react";
+import { SvgProps } from "react-native-svg";
 
-import { Container } from "./Accessory.styles";
+import { Container, Name } from "./Accessory.styles";
 
-export function Accessory() {
-  return <Container></Container>;
+interface Props {
+  name: string;
+  icon: React.FC<SvgProps>;
+}
+
+export function Accessory({ name, icon: Icon }: Props) {
+  return (
+    <Container>
+      <Icon width={32} height={32} />
+      <Name>{name}</Name>
+    </Container>
+  );
 }
